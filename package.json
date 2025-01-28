@@ -1,0 +1,24 @@
+{
+  "name": "take-home-test-qa-bluebird",
+  "version": "1.0.0",
+  "description": "Documentation take home test qa bluebird",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppraatama/take-home-test-qa-bluebird.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ppraatama/take-home-test-qa-bluebird/issues"
+  },
+  "homepage": "https://github.com/ppraatama/take-home-test-qa-bluebird#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
