@@ -1,6 +1,6 @@
 const request = require("supertest");
 
-describe("Testing external API with Supertest", () => {
+describe("Create Products in API Practice Software Testing", () => {
   const baseURL = "https://api.practicesoftwaretesting.com";
   let brandId = "";
   let categoryId = "";
@@ -108,4 +108,4 @@ describe("Testing external API with Supertest", () => {
     expect(response.status).toBe(201);
     expect(response.body).toHaveProperty("id");
   });
-});
+})
