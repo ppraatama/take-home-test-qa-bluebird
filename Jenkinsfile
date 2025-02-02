@@ -1,23 +1,22 @@
 pipeline {
     agent any
-    
-    environment {
-        // Mendefinisikan Node.js dan npm yang diperlukan
-        NODEJS_HOME = tool name: 'NodeJS', type: 'NodeJSInstallation'
+
+    tools {
+        // Menyebutkan NodeJS yang telah dikonfigurasi
+        nodejs 'NodeJS'
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                // Menarik kode dari repositori
                 git branch: 'master', url: 'https://github.com/ppraatama/take-home-test-qa-bluebird.git'
             }
         }
-        
+
         stage('Install Dependencies') {
             steps {
-                // Menginstal dependencies menggunakan npm
                 script {
+                    // Menjalankan npm install untuk menginstal dependensi
                     sh 'npm install'
                 }
             }
@@ -25,25 +24,23 @@ pipeline {
 
         stage('Run Jest Tests') {
             steps {
-                // Menjalankan Jest untuk melakukan pengujian
                 script {
-                    sh 'npm test'  // Ini akan menjalankan jest sesuai dengan script di package.json
+                    // Menjalankan npm test untuk menjalankan Jest
+                    sh 'npm test'
                 }
             }
         }
-
+        
         stage('Archive Test Results') {
             steps {
-                // Menyimpan hasil tes Jest ke Jenkins
-                junit '**/test-*.xml'  // Pastikan Jest dikonfigurasi untuk menghasilkan XML results
+                junit '**/test-*.xml'  // Menyimpan hasil tes jika ada
             }
         }
     }
-    
+
     post {
         always {
-            // Hapus file build jika perlu
-            cleanWs()
+            cleanWs()  // Membersihkan workspace setelah pipeline selesai
         }
     }
 }
