@@ -20,6 +20,14 @@ pipeline {
             }
         }
 
+        stage('Update Dependencies') {
+            steps {
+                script {
+                    sh 'npm update'
+                }
+            }
+        }
+
         stage('Run Jest Tests') {
             steps {
                 script {
