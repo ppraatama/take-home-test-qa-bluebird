@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'git@github.com:ppraatama/take-home-test-qa-bluebird.git'  // Ganti dengan repo proyek Anda
+                git 'git@github.com:ppraatama/take-home-test-qa-bluebird.git' 
             }
         }
 
