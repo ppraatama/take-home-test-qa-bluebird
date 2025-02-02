@@ -74,7 +74,6 @@ describe("Get products in practice software testing with method GET", () => {
     const response = await request(baseURL).get(`/products/${productId}-${a}`);
 
     expect(response.body).toHaveProperty("message")
-    console.log("Response Body:", response.body);
     expect(response.status).toBe(404);
     console.log("Response status:", response.status)
   });
@@ -83,7 +82,6 @@ describe("Get products in practice software testing with method GET", () => {
     const response = await request(baseURL)
     .post(`/products/${productId}`);
 
-    console.log("Response Body:", response.body);
     console.log("Response status:", response.status);
     expect(response.body).toHaveProperty("message")
     expect(response.status).toBe(405);

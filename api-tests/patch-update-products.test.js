@@ -49,7 +49,6 @@ describe("Update products in practice software testing with method PATCH", () =>
       })
       .set("Content-Type", "application/json");
 
-    console.log("Response Body:", response.body);
     console.log("Response Status:", response.status);
     console.log(response.status);
     expect(response.status).toBe(200);
@@ -65,7 +64,6 @@ describe("Update products in practice software testing with method PATCH", () =>
     })
     .set("Content-Type", "application/json");
 
-    console.log("Response Body:", response.body);
     console.log("Response Status:", response.status);
     expect(response.status).toBe(405)
     expect(response.body).toHaveProperty("message");
@@ -80,7 +78,6 @@ describe("Update products in practice software testing with method PATCH", () =>
     })
     .set("Content-Type", "application/json");
 
-    console.log("Response Body:", response.body);
     console.log("Response Status:", response.status);
     expect(response.body).toHaveProperty("message");
     expect(response.status).toBe(404);
