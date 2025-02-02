@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     tools {
-        // Menyebutkan NodeJS yang telah dikonfigurasi
         nodejs 'NodeJS'
     }
 
@@ -16,7 +15,6 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    // Menjalankan npm install untuk menginstal dependensi
                     sh 'npm install'
                 }
             }
@@ -25,22 +23,21 @@ pipeline {
         stage('Run Jest Tests') {
             steps {
                 script {
-                    // Menjalankan npm test untuk menjalankan Jest
                     sh 'npm test'
                 }
             }
         }
-        
+
         stage('Archive Test Results') {
             steps {
-                junit 'test-reports/test-report.xml'  // Menyimpan hasil tes jika ada
+                junit '**/test-reports/test-report.xml' 
             }
         }
     }
 
     post {
         always {
-            cleanWs()  // Membersihkan workspace setelah pipeline selesai
+            cleanWs()
         }
     }
 }
