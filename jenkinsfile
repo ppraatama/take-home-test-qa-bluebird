@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     environment {
-        NODEJS_VERSION = '22'  // Sesuaikan dengan versi Node.js yang digunakan
+        NODEJS_VERSION = '22'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/ppraatama/take-home-test-qa-bluebird'  // Ganti dengan repo proyek Anda
+                git 'https://github.com/ppraatama/take-home-test-qa-bluebird.git'  // Ganti dengan repo proyek Anda
             }
         }
 
