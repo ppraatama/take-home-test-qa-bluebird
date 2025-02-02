@@ -4,7 +4,7 @@
   "description": "Documentation take home test qa bluebird",
   "main": "index.js",
   "scripts": {
-    "test": "jest --ci --reporters=default --reporters=jest-junit"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
