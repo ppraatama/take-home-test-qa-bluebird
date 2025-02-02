@@ -33,7 +33,7 @@ pipeline {
         
         stage('Archive Test Results') {
             steps {
-                junit '**/test-*.xml'  // Menyimpan hasil tes jika ada
+                junit 'test-reports/test-report.xml'  // Menyimpan hasil tes jika ada
             }
         }
     }
