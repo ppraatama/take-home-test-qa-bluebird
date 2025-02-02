@@ -88,6 +88,7 @@ describe("Create products in practice software testing with method POST", () => 
       .send(reqBodyProducts)
       .set("Content-Type", "application/json");
 
+    console.log("Response Body:", response.body);
     console.log("Response Status:" ,response.status)
     expect(response.status).toBe(201);
     expect(response.body).toHaveProperty("id");
@@ -110,6 +111,7 @@ describe("Create products in practice software testing with method POST", () => 
       .send(reqBodyProducts)
       .set("Content-Type", "application/json");
 
+    console.log("Response Body:", response.body);
     console.log("Response Status:", response.status);
     expect(response.status).toBe(404);
     expect(response.body).toHaveProperty("message")
@@ -132,6 +134,7 @@ describe("Create products in practice software testing with method POST", () => 
       .send(reqBodyProducts)
       .set("Content-Type", "application/json");
 
+    console.log("Response Body:", response.body);
     console.log("Response Status:", response.status);
     expect(response.status).toBe(405);
     expect(response.body).toHaveProperty("message")

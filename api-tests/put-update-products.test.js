@@ -60,6 +60,7 @@ describe("Update products in practice software testing with method PUT", () => {
     expect(response.status).toBe(200);
     console.log(response.status);
     expect(response.body).toHaveProperty("success");
+    console.log(response.body);
   });
 
   test("Scenario: Verify user input wrong method", async () => {
@@ -81,6 +82,7 @@ describe("Update products in practice software testing with method PUT", () => {
     console.log("Response Status:", response.status);
 
     console.log(response.status);
+    console.log(response.body);
     expect(response.status).toBe(405);
     expect(response.body).toHaveProperty("message");
   });
