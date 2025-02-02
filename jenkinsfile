@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    environment {
+        NODEJS_VERSION = '22'  // Sesuaikan dengan versi Node.js yang digunakan
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/ppraatama/take-home-test-qa-bluebird'  // Ganti dengan repo proyek Anda
+            }
+        }
+
+        stage('Setup Node.js') {
+            steps {
+                script {
+                    def nodeHome = tool name: 'NodeJS', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+                    env.PATH = "${nodeHome}/bin:${env.PATH}"
+                }
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                sh 'npm test -- --ci --reporters=default --reporters=jest-junit'
+            }
+        }
+
+        stage('Publish Test Results') {
+            steps {
+                junit 'junit.xml'
+            }
+        }
+    }
+}

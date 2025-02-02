@@ -3,4 +3,4 @@ node_modules
 package-lock.json
 
 jest_html_reporters.html
-jest_html_reporters-attach/
+jest-html-reporters-attach/
