@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // Menarik kode dari repositori
-                git branch: 'main', url: 'https://github.com/your-username/your-repository.git'
+                git branch: 'master', url: 'https://github.com/ppraatama/take-home-test-qa-bluebird.git'
             }
         }
         
