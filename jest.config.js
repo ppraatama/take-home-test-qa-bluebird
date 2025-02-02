@@ -195,4 +195,18 @@ const config = {
   // watchman: true,
 };
 
+module.exports = {
+  // Pengaturan lainnya...
+  reporters: [
+    "default",
+    [
+      "jest-junit",
+      {
+        outputDirectory: "./test-reports",  // Direktori tempat laporan disimpan
+        outputName: "test-report.xml"       // Nama file laporan
+      }
+    ]
+  ]
+};
+
 module.exports = config;
