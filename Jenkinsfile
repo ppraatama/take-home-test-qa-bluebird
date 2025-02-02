@@ -31,7 +31,7 @@ pipeline {
         stage('Run Jest Tests') {
             steps {
                 script {
-                    sh 'npm test'
+                    sh 'npm test --ci'
                 }
             }
         }
