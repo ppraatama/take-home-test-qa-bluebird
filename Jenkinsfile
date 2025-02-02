@@ -39,7 +39,7 @@ pipeline {
         stage('Archive Test Results') {
             steps {
                 script{
-                    junit '**/test-reports/test-report.xml'
+                    junit '**/test-reports/*.xml'
                 } 
             }
         }
