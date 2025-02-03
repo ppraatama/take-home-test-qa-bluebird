@@ -23,3 +23,11 @@ Hal yang perlu di persiapkan pertama kali untuk menjalankan jest adalah sbb :
  5. Ketikan perintah `npm install supertest --save-dev` untuk menginstall super test
  6. Ketikan perintah `npm install jest-html-reporters --save-dev` untuk reports jest yang bisa di lihat lewat html
  7. Ketikan perintah `npm test` untuk menjalankan jest
+
+ Dalam membuat test automation API saya belum menggunakan template jest yang dipisah-pisah per directory dikarenakan ada kendala yang saya alami. Jadi saya memutuskan semua test saya buat, saya satukan di dalam folder api-tests/products/ . 
+
+Dalam pembuatan take home test ini saya integrasi dengan github sebagai tempat untuk menyimpan folder karena gratis dan mudah di implementasi. 
+
+Lalu untuk implementasi CI/CD saya menggunakan jenkins di local saya karena open source dan juga tutorialnya banyak sehingga saya bisa implementasi di proyek saya.
+
+Proyek saya masih banyak yang perlu di improve mungkin bisa menggunakan framework yang lebih proper agar secara foldering bisa lebih rapih.
