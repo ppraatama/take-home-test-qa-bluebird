@@ -7,12 +7,12 @@
 const config = {
   clearMocks: true,
   reporters: [
-    "default", // Reporter default untuk terminal
+    "default", 
     [
       "jest-junit",
       {
-        outputDirectory: "./test-reports", // Tempat menyimpan file laporan
-        outputName: "test-report.xml", // Nama file XML
+        outputDirectory: "./test-reports", 
+        outputName: "test-report.xml", 
       },
     ],
   ],
