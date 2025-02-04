@@ -43,6 +43,19 @@ pipeline {
                 } 
             }
         }
+
+        stage('Publish HTML Report') {
+            steps {
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: false,
+                    keepAll: true,
+                    reportDir: 'test-reports',
+                    reportFiles: 'test-report.html',
+                    reportName: 'Jest HTML Report'
+                ])
+            }
+        }
     }
 
     post {
