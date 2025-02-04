@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="15" failures="0" errors="0" time="15.543">
+  <testsuite name="Update products in practice software testing with method PATCH" errors="0" failures="0" skipped="0" timestamp="2025-02-04T16:24:56" time="6.199" tests="4">
+    <testcase classname="Update products in practice software testing with method PATCH Scenario: Verify success update product id" name="Update products in practice software testing with method PATCH Scenario: Verify success update product id" time="1.889">
+    </testcase>
+    <testcase classname="Update products in practice software testing with method PATCH Scenario: Verify user input wrong method" name="Update products in practice software testing with method PATCH Scenario: Verify user input wrong method" time="1.274">
+    </testcase>
+    <testcase classname="Update products in practice software testing with method PATCH Scenario: Verify user input wrong endpoint" name="Update products in practice software testing with method PATCH Scenario: Verify user input wrong endpoint" time="1.27">
+    </testcase>
+    <testcase classname="Update products in practice software testing with method PATCH Scenario: Verify return status code 422 when the server was not able to process" name="Update products in practice software testing with method PATCH Scenario: Verify return status code 422 when the server was not able to process" time="1.391">
+    </testcase>
+  </testsuite>
+  <testsuite name="Update products in practice software testing with method PUT" errors="0" failures="0" skipped="0" timestamp="2025-02-04T16:24:56" time="6.339" tests="4">
+    <testcase classname="Update products in practice software testing with method PUT Scenario: Verify success update product id" name="Update products in practice software testing with method PUT Scenario: Verify success update product id" time="1.95">
+    </testcase>
+    <testcase classname="Update products in practice software testing with method PUT Scenario: Verify user input wrong method" name="Update products in practice software testing with method PUT Scenario: Verify user input wrong method" time="1.272">
+    </testcase>
+    <testcase classname="Update products in practice software testing with method PUT Scenario: Verify When Returns when the resource is not found" name="Update products in practice software testing with method PUT Scenario: Verify When Returns when the resource is not found" time="1.244">
+    </testcase>
+    <testcase classname="Update products in practice software testing with method PUT Scenario: Verify return status code 422 when the server was not able to process" name="Update products in practice software testing with method PUT Scenario: Verify return status code 422 when the server was not able to process" time="1.499">
+    </testcase>
+  </testsuite>
+  <testsuite name="Get products in practice software testing with method GET" errors="0" failures="0" skipped="0" timestamp="2025-02-04T16:24:56" time="11.729" tests="3">
+    <testcase classname="Get products in practice software testing with method GET Scenario: Verify success get product" name="Get products in practice software testing with method GET Scenario: Verify success get product" time="3.747">
+    </testcase>
+    <testcase classname="Get products in practice software testing with method GET Scenario: Verify invalid inputs products id" name="Get products in practice software testing with method GET Scenario: Verify invalid inputs products id" time="3.458">
+    </testcase>
+    <testcase classname="Get products in practice software testing with method GET Scenario: Scenario: Verify user input wrong method" name="Get products in practice software testing with method GET Scenario: Scenario: Verify user input wrong method" time="4.149">
+    </testcase>
+  </testsuite>
+  <testsuite name="Create products in practice software testing with method POST" errors="0" failures="0" skipped="0" timestamp="2025-02-04T16:24:56" time="15.382" tests="4">
+    <testcase classname="Create products in practice software testing with method POST Scenario: Verify success create products" name="Create products in practice software testing with method POST Scenario: Verify success create products" time="3.104">
+    </testcase>
+    <testcase classname="Create products in practice software testing with method POST Scenario: Verify failed create products when the resource not found" name="Create products in practice software testing with method POST Scenario: Verify failed create products when the resource not found" time="2.847">
+    </testcase>
+    <testcase classname="Create products in practice software testing with method POST Scenario: Verify failed create product using wrong method" name="Create products in practice software testing with method POST Scenario: Verify failed create product using wrong method" time="2.549">
+    </testcase>
+    <testcase classname="Create products in practice software testing with method POST Scenario: Verify failed create product input wrong field" name="Create products in practice software testing with method POST Scenario: Verify failed create product input wrong field" time="6.506">
+    </testcase>
+  </testsuite>
+</testsuites>

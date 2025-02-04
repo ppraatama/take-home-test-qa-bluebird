@@ -15,6 +15,14 @@ const config = {
         outputName: "test-report.xml", 
       },
     ],
+    [
+      "jest-html-reporters",
+      {
+        publicPath: "./test-reports",
+        filename: "test-report.html",
+        expand: true,
+      },
+    ],
   ],
 };
 
